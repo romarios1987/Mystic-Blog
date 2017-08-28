@@ -96,3 +96,14 @@ aside .collapsible .collapsible-body{
 .page-footer .footer-copyright{
 	background-color: rgba(255,255,255,.4)!important;
 }
+
+.admin-content{
+	margin-top: 45px;
+}
+.admin-content .red.accent-4{
+	margin-top: 25px;
+}
+.admin-content table img{
+	vertical-align: top;
+	width: 115px;
+}
