@@ -3,12 +3,10 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Admin panel/Mystic Blog</title>
-	<link rel="shortcut icon" type='image/x-icon' href="../images/favicon/tomcat.ico">
 	<link rel="stylesheet" href="style.css">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="../libs/materialize/css/materialize.css">
-	
 </head>
 <body>
 	<div class="container">
@@ -62,7 +60,7 @@
 							<div class="collapsible-header"><i class="material-icons">place</i>Страницы</div>
 							<div class="collapsible-body">
 								<ul class="collection">
-									<li class=""><a href="page_add.html" class="collection-item">Добавить страницу</a></li>
+									<li class=""><a href="#" class="collection-item">Добавить страницу</a></li>
 									<li class=""><a href="#" class="collection-item active">О нас</a></li>
 									<li class=""><a href="#" class="collection-item">Контакты</a></li>
 								</ul>
@@ -72,8 +70,8 @@
 							<div class="collapsible-header"><i class="material-icons">place</i>Категории</div>
 							<div class="collapsible-body">
 								<ul class="collection">
-									<li class=""><a href="cat_add.html" class="collection-item">Добавить категорию</a></li>
-									<li class=""><a href="cat_list.html" class="collection-item active">Список категорий</a></li>
+									<li class=""><a href="#" class="collection-item">Добавить категорию</a></li>
+									<li class=""><a href="#" class="collection-item active">Список категорий</a></li>
 								</ul>
 							</div>
 						</li>
@@ -81,8 +79,8 @@
 							<div class="collapsible-header"><i class="material-icons">place</i>Слайдер</div>
 							<div class="collapsible-body">
 								<ul class="collection">
-									<li class=""><a href="slide_add.html" class="collection-item">Добавить слайд</a></li>
-									<li class=""><a href="slide_list.html" class="collection-item active">Список слайдов</a></li>
+									<li class=""><a href="#" class="collection-item">Добавить слайд</a></li>
+									<li class=""><a href="#" class="collection-item active">Список слайдов</a></li>
 								</ul>
 							</div>
 						</li>   
@@ -101,15 +99,31 @@
 			<div class="col s12 m8 l9">
 				<main>
 					<div class="admin-dashboard">
-						<div class="header-dash"><h5>Dashbord</h5></div>
+						<div class="header-dash"><h5>Добавить новую страницу</h5></div>
 						<div class="divider"></div>
 						<div class="admin-content">
-							<p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты.</p>
+
+							<form action="#">
+								<div class="row">
+									<div class="col m12 s12">
+										<h6><b>Название</b></h6>
+										<div class="input-field">
+											<input id="last_name" type="text">
+											<label for="last_name">Введите название страницы</label>
+										</div>
+										<h6><b>Описание</b></h6>
+										<div class="input-field col s12">
+											<textarea id="textarea1" name="ck_editor" class="materialize-textarea"></textarea>
+										</div>
+										<input type="submit" class="waves-effect waves-light btn pulse red accent-4" value="Сохранить">
+									</div>
+								</div>
+							</form>
+
 						</div>
 					</div>
 				</main>
 			</div>
-
 		</div>
 	</div>
 	<footer class="page-footer">
@@ -120,10 +134,10 @@
 			</div>
 		</div>
 	</footer>
-
 	<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 	<script src="../libs/materialize/js/materialize.min.js"></script>
+	<script type="text/javascript" src="../libs/ckeditor/ckeditor.js"></script>
 	<script src="script.js"></script>
-
+	<p><b><i>sieo'cb'seb'vb;eo'</i></b></p>
 </body>
 </html>
