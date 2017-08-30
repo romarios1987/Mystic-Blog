@@ -6,3 +6,5 @@
 * fontawesome
 * jquery
 * javascript
+* CKEditor
+* kcfinder
