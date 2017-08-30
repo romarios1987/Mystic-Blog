@@ -107,3 +107,22 @@ aside .collapsible .collapsible-body{
 	vertical-align: top;
 	width: 115px;
 }
+
+.fogot-link{
+	margin-right: 20px;
+	font-size: 15px;
+}
+label a.fogot-link b:hover{
+	color: #222;
+}
+
+.wrap-login-panel{
+	min-height: 100vh;
+	justify-content: center;
+
+}
+.login-panel{
+	background-color: rgba(255,255,255, .7);
+	width: 360px;
+	position: relative;
+}
