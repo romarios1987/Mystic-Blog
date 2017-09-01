@@ -3,12 +3,10 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Admin panel/Mystic Blog</title>
-	<link rel="shortcut icon" type='image/x-icon' href="../images/favicon/tomcat.ico">
 	<link rel="stylesheet" href="style.css">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="../libs/materialize/css/materialize.css">
-	
 </head>
 <body>
 	<div class="container">
@@ -49,7 +47,7 @@
 				<aside>
 					<ul class="collapsible" data-collapsible="accordion">
 						<li>
-							<div class="collapsible-header"><i class="material-icons">open_with</i>Настройки сайта</div>
+							<div class="collapsible-header"><i class="material-icons">place</i>Настройки сайта</div>
 							<div class="collapsible-body">
 								<ul class="collection">
 									<li class=""><a href="#" class="collection-item">Название и слоган</a></li>
@@ -59,39 +57,39 @@
 							</div>
 						</li>
 						<li>
-							<div class="collapsible-header"><i class="material-icons">open_with</i>Страницы</div>
+							<div class="collapsible-header"><i class="material-icons">place</i>Страницы</div>
 							<div class="collapsible-body">
 								<ul class="collection">
-									<li class=""><a href="page_add.html" class="collection-item">Добавить страницу</a></li>
+									<li class=""><a href="#" class="collection-item">Добавить страницу</a></li>
 									<li class=""><a href="#" class="collection-item active">О нас</a></li>
 									<li class=""><a href="#" class="collection-item">Контакты</a></li>
 								</ul>
 							</div>
 						</li>
 						<li>
-							<div class="collapsible-header"><i class="material-icons">open_with</i>Категории</div>
+							<div class="collapsible-header"><i class="material-icons">place</i>Категории</div>
 							<div class="collapsible-body">
 								<ul class="collection">
-									<li class=""><a href="cat_add.html" class="collection-item">Добавить категорию</a></li>
-									<li class=""><a href="cat_list.html" class="collection-item active">Список категорий</a></li>
+									<li class=""><a href="#" class="collection-item">Добавить категорию</a></li>
+									<li class=""><a href="#" class="collection-item active">Список категорий</a></li>
 								</ul>
 							</div>
 						</li>
 						<li>
-							<div class="collapsible-header"><i class="material-icons">open_with</i>Слайдер</div>
+							<div class="collapsible-header"><i class="material-icons">place</i>Слайдер</div>
 							<div class="collapsible-body">
 								<ul class="collection">
-									<li class=""><a href="slide_add.html" class="collection-item">Добавить слайд</a></li>
-									<li class=""><a href="slide_list.html" class="collection-item active">Список слайдов</a></li>
+									<li class=""><a href="#" class="collection-item">Добавить слайд</a></li>
+									<li class=""><a href="#" class="collection-item active">Список слайдов</a></li>
 								</ul>
 							</div>
 						</li>   
 						<li>
-							<div class="collapsible-header"><i class="material-icons">open_with</i>Статьи</div>
+							<div class="collapsible-header"><i class="material-icons">place</i>Статьи</div>
 							<div class="collapsible-body">
 								<ul class="collection">
-									<li class=""><a href="post_add.html" class="collection-item">Добавить статью</a></li>
-									<li class=""><a href="post_list.html" class="collection-item active">Список статей</a></li>
+									<li class=""><a href="#" class="collection-item">Добавить статью</a></li>
+									<li class=""><a href="#" class="collection-item active">Список статей</a></li>
 								</ul>
 							</div>
 						</li>  
@@ -101,15 +99,71 @@
 			<div class="col s12 m8 l9">
 				<main>
 					<div class="admin-dashboard">
-						<div class="header-dash"><h5>Dashbord</h5></div>
+						<div class="header-dash"><h5>Входящие</h5></div>
 						<div class="divider"></div>
 						<div class="admin-content">
-							<p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты.</p>
+							<table class="highlight responsive-table  grey lighten-3 bordered">
+								<thead>
+									<tr>
+										<th>Номер</th>
+										<th>Имя отправителя</th>
+										<th>Email отправителя</th>
+										<th>Сообщение</th>
+										<th>Дата</th>
+										<th>Действие</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>1</td>
+										<td>Roman Batiuk</td>
+										<td>remi9988@mail.ru</td>
+										<td>Сообщение Сообщение</td>
+										<td>21.23.1099</td>
+										<td>
+											<a href="#" class="black-text" title="Просмотреть"><i class="fa fa-eye"></i></a> ||
+											<a href="#" class="black-text" title="Ответить"><i class="fa fa-reply"></i></a> || 
+											<a href="#" class="black-text" title="Переместить"><i class="fa fa-arrows"></i></a>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				<br>
+					<div class="admin-dashboard">
+						<div class="header-dash"><h5>Просмотренные сообщения</h5></div>
+						<div class="divider"></div>
+						<div class="admin-content">
+							<table class="highlight responsive-table  grey lighten-3 bordered">
+								<thead>
+									<tr>
+										<th>Номер</th>
+										<th>Имя отправителя</th>
+										<th>Email отправителя</th>
+										<th>Сообщение</th>
+										<th>Дата</th>
+										<th>Действие</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>1</td>
+										<td>Roman Batiuk</td>
+										<td>remi9988@mail.ru</td>
+										<td>Сообщение Сообщение</td>
+										<td>21.23.1099</td>
+										<td>
+											<a href="#" class="black-text" title="Просмотреть"><i class="fa fa-eye"></i></a> ||
+											<a href="#" class="red-text accent-4" title="Удалить"><i class="fa fa-trash-o"></i></a>
+										</td>
+									</tr>
+								</tbody>
+							</table>
 						</div>
 					</div>
 				</main>
 			</div>
-
 		</div>
 	</div>
 	<footer class="page-footer">
@@ -120,9 +174,8 @@
 			</div>
 		</div>
 	</footer>
-
 	<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 	<script src="../libs/materialize/js/materialize.min.js"></script>
-	<script src="script.js"></script>
+	<!-- <script src="script.js"></script> -->
 </body>
 </html>
