@@ -1,6 +1,6 @@
 $(document).ready(function(){
 	$('.slider').slider({
-		transition: 3000
+		transition: 2500
 	});
 	$('.materialboxed').materialbox();
 

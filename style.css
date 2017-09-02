@@ -1,18 +1,18 @@
 @font-face {
     font-family: "OpenSansRegular";
-    src: url("../fonts/OpenSansRegular/OpenSansRegular.eot");
-    src: url("../fonts/OpenSansRegular/OpenSansRegular.eot?#iefix")format("embedded-opentype"),
-    url("../fonts/OpenSansRegular/OpenSansRegular.woff") format("woff"),
-    url("../fonts/OpenSansRegular/OpenSansRegular.ttf") format("truetype");
+    src: url("fonts/OpenSansRegular/OpenSansRegular.eot");
+    src: url("fonts/OpenSansRegular/OpenSansRegular.eot?#iefix")format("embedded-opentype"),
+    url("fonts/OpenSansRegular/OpenSansRegular.woff") format("woff"),
+    url("fonts/OpenSansRegular/OpenSansRegular.ttf") format("truetype");
     font-style: normal;
     font-weight: normal;
 }
   @font-face {
     font-family: "OpenSansSemiBold";
-    src: url("../fonts/OpenSansSemiBold/OpenSansSemiBold.eot");
-    src: url("../fonts/OpenSansSemiBold/OpenSansSemiBold.eot?#iefix")format("embedded-opentype"),
-    url("../fonts/OpenSansSemiBold/OpenSansSemiBold.woff") format("woff"),
-    url("../fonts/OpenSansSemiBold/OpenSansSemiBold.ttf") format("truetype");
+    src: url("fonts/OpenSansSemiBold/OpenSansSemiBold.eot");
+    src: url("fonts/OpenSansSemiBold/OpenSansSemiBold.eot?#iefix")format("embedded-opentype"),
+    url("fonts/OpenSansSemiBold/OpenSansSemiBold.woff") format("woff"),
+    url("fonts/OpenSansSemiBold/OpenSansSemiBold.ttf") format("truetype");
     font-style: normal;
     font-weight: normal;
 }
@@ -25,13 +25,28 @@ h1, h2, h3, h4, h5, h6{
   font-family: OpenSansSemiBold, sans-serif;
 }
 
+.wrap-center-content{
+    margin-top: 35px;
+}
+
+nav ul a:hover{
+    background-color: rgba(255, 255, 255, .4)!important;
+}
+.side-nav li a:hover{
+    background: rgba(0,0,0,.7)!important;
+    color: #ffffff;
+}
+.side-nav li a{
+    font-family: OpenSansSemiBold, sans-serif;
+}
+
 .header{
 	height: 100%;
-	margin-bottom: 45px;
 }
 .main-menu{
 	position: relative;
 	background: rgba(0,0,0,.7);
+/*    background-color: rgba(255,255,255,.4);*/
 	z-index: 5;
 }
 .brand-logo{
@@ -42,9 +57,14 @@ h1, h2, h3, h4, h5, h6{
 } 
 .brand-logo span{
   vertical-align: top;
-  color: #000;
   font-family: OpenSansSemiBold, sans-serif;
 }
+
+.slider-wrap{
+    min-height: 100vh;
+    margin-top: -56px;
+}
+
 .slider .slides li::before{
 	content: '';
 	position: absolute;
@@ -208,11 +228,7 @@ nav ul li.active{
 	margin-bottom: 10px;
 }
 .rel-post .title{
-  text-transform: none;
-  font-style: italic;
   color: rgba(255, 255, 255, 0.7);
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
-  opacity: 0;
   -moz-transition-property: all;
   -o-transition-property: all;
   -webkit-transition-property: all;
@@ -235,14 +251,12 @@ nav ul li.active{
   top: 40%;
   left: 0;
   text-align: center;
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;
   z-index: 2;
   width: 100%;
   height: 100%;
 }
 .rel-post:hover .title{
-	filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
   opacity: 1;
 }
 .rel-post:hover img{
@@ -250,7 +264,6 @@ nav ul li.active{
   -ms-transform: scale(1, 1);
   -webkit-transform: scale(1, 1);
   transform: scale(1, 1);
-  background-position: top top;
   -webkit-filter: grayscale(0.4) blur(2px);
   filter: grayscale(0.4) blur(2px);
   -moz-transition-property: all;
@@ -263,11 +276,10 @@ nav ul li.active{
   transition-duration: 0.8s;	
 }
 .rel-post:hover:hover img{
-	filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
   opacity: 0.5;
 }
 .rel-post img{
-	display: block;
+    display: block;
   text-align: center;
   -moz-transform: scale(1.09, 1.09);
   -ms-transform: scale(1.09, 1.09);
