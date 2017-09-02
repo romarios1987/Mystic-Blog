@@ -1,3 +1,10 @@
+<?php
+require_once "config/config.php";
+require_once "classes/Database.php";
+require_once "classes/Format.php";
+$db = new Database();
+$fm = new Format();
+?>
 <!DOCTYPE html>
 <html lang="ru">
 <head>

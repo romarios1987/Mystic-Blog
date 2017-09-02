@@ -29,6 +29,12 @@ h1, h2, h3, h4, h5, h6{
     margin-top: 35px;
 }
 
+.card.large{
+  height: 600px!important;
+}
+.card .card-image .card-title{
+  background: rgba(0,0,0,.7);
+}
 nav ul a:hover{
     background-color: rgba(255, 255, 255, .4)!important;
 }
@@ -340,11 +346,14 @@ nav ul li.active{
   margin-top: 50px;
 }
 
-
 @media screen and (max-width: 490px) {
     nav .brand-logo span{
         font-size: 18px;
     }
+    .card .card-image .card-title{
+      font-size: 17px;
+    }
+
 }
 @media screen and (max-width: 320px) {
     nav .brand-logo span{

@@ -1,8 +1,5 @@
 <?php
 
-/**
- * Class Database
- */
 Class Database
 {
     public $host = DB_HOST;
@@ -14,37 +11,25 @@ Class Database
     public $link;
     public $error;
 
-    /**
-     * Database constructor.
-     */
     public function __construct()
     {
         $this->connectDB();
     }
 
-    /**
-     * @return bool
-     */
     private function connectDB()
     {
-        $this->link = new mysqli($this->host, $this->user, $this->pass,
-            $this->db_name);
+        $this->link = new mysqli($this->host, $this->user, $this->pass, $this->db_name);
         if (!$this->link) {
             $this->error = "Connection fail" . $this->link->connect_error;
             return false;
         }
     }
 
+    // Select or Read data
 
-    /**
-     * Select or Read data
-     * @param $query
-     * @return bool
-     */
     public function select($query)
     {
-        $result = $this->link->query($query) or
-        die($this->link->error . __LINE__);
+        $result = $this->link->query($query) or die($this->link->error . __LINE__);
         if ($result->num_rows > 0) {
             return $result;
         } else {
@@ -52,52 +37,47 @@ Class Database
         }
     }
 
-    /**
-     * Insert data
-     * @param $query
-     * @return bool
-     */
+    // Insert data
     public function insert($query)
     {
-        $insert_row = $this->link->query($query) or
-        die($this->link->error . __LINE__);
+        $insert_row = $this->link->query($query) or die($this->link->error . __LINE__);
         if ($insert_row) {
+            /*            header("Location: index.php?msg=" . urlencode('Data Inserted successfully.'));
+                        exit();*/
             return $insert_row;
         } else {
+            /*die("Error :(" . $this->link->errno . ")" . $this->link->error);*/
             return false;
         }
     }
 
-    /**
-     * Update data
-     * @param $query
-     * @return bool
-     */
+    // Update data
     public function update($query)
     {
-        $update_row = $this->link->query($query) or
-        die($this->link->error . __LINE__);
+        $update_row = $this->link->query($query) or die($this->link->error . __LINE__);
         if ($update_row) {
+            /*            header("Location: index.php?msg=" . urlencode('Data Updated successfully.'));
+                        exit();*/
             return $update_row;
         } else {
+            /* die("Error :(" . $this->link->errno . ")" . $this->link->error);*/
             return false;
         }
     }
 
-    /**
-     * Delete data
-     * @param $query
-     * @return bool
-     */
+    // Delete data
     public function delete($query)
     {
-        $delete_row = $this->link->query($query) or
-        die($this->link->error . __LINE__);
+        $delete_row = $this->link->query($query) or die($this->link->error . __LINE__);
         if ($delete_row) {
+            /*            header("Location: index.php?msg=" . urlencode('Data Deleted successfully.'));
+                        exit();*/
             return $delete_row;
         } else {
+            /* die("Error :(" . $this->link->errno . ")" . $this->link->error);*/
             return false;
         }
     }
 
 }
+
