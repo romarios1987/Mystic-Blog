@@ -14,10 +14,13 @@ $fm = new Format();
     <link rel="shortcut icon" type='image/x-icon' href="images/favicon/tomcat.ico">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="libs/materialize/css/materialize.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<div id="overlay">
+    <div><img src="images/loading.gif" width="64px" height="64px"/></div>
+</div>
 <header class="header">
     <nav class="main-menu">
         <div class="container">

@@ -1,46 +1,63 @@
 <?php
 
-Class Database
+/**
+ * Class Database
+ */
+class Database
 {
-    public $host = DB_HOST;
-    public $user = DB_USER;
-    public $pass = DB_PASS;
-    public $db_name = DB_NAME;
+    private $host = DB_HOST;
+    private $user = DB_USER;
+    private $password = DB_PASS;
+    private $database = DB_NAME;
+    private $conn;
 
-
-    public $link;
-    public $error;
-
-    public function __construct()
+    function __construct()
     {
-        $this->connectDB();
+        $this->conn = $this->connectDB();
     }
 
-    private function connectDB()
+    /**
+     * @return mysqli
+     */
+    function connectDB()
     {
-        $this->link = new mysqli($this->host, $this->user, $this->pass, $this->db_name);
-        if (!$this->link) {
-            $this->error = "Connection fail" . $this->link->connect_error;
-            return false;
+        $conn = mysqli_connect($this->host, $this->user, $this->password, $this->database);
+        return $conn;
+    }
+
+    /**
+     * Returns an associative array of strings representing the fetched row. NULL if there are no more rows in result-set
+     * @param $query
+     * @return array
+     */
+    function runQuery($query)
+    {
+        $result = mysqli_query($this->conn, $query);
+        while ($row = mysqli_fetch_assoc($result)) {
+            $resultset[] = $row;
         }
+        if (!empty($resultset))
+            return $resultset;
+
     }
 
-    // Select or Read data
-
-    public function select($query)
+    /**
+     * Returns the number of rows in the result set
+     * @param $query
+     * @return int
+     */
+    function numRows($query)
     {
-        $result = $this->link->query($query) or die($this->link->error . __LINE__);
-        if ($result->num_rows > 0) {
-            return $result;
-        } else {
-            return false;
-        }
+        $result = mysqli_query($this->conn, $query);
+        $rowcount = mysqli_num_rows($result);
+        return $rowcount;
     }
+
 
     // Insert data
     public function insert($query)
     {
-        $insert_row = $this->link->query($query) or die($this->link->error . __LINE__);
+        $insert_row = $this->conn->query($query) or die($this->conn->error . __LINE__);
         if ($insert_row) {
             /*            header("Location: index.php?msg=" . urlencode('Data Inserted successfully.'));
                         exit();*/
@@ -54,7 +71,7 @@ Class Database
     // Update data
     public function update($query)
     {
-        $update_row = $this->link->query($query) or die($this->link->error . __LINE__);
+        $update_row = $this->conn->query($query) or die($this->conn->error . __LINE__);
         if ($update_row) {
             /*            header("Location: index.php?msg=" . urlencode('Data Updated successfully.'));
                         exit();*/
@@ -68,7 +85,7 @@ Class Database
     // Delete data
     public function delete($query)
     {
-        $delete_row = $this->link->query($query) or die($this->link->error . __LINE__);
+        $delete_row = $this->conn->query($query) or die($this->conn->error . __LINE__);
         if ($delete_row) {
             /*            header("Location: index.php?msg=" . urlencode('Data Deleted successfully.'));
                         exit();*/

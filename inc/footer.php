@@ -39,5 +39,8 @@
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script type="text/javascript" src="libs/materialize/js/materialize.min.js"></script>
 <script type="text/javascript" src="js/script.js"></script>
+<script>
+    getresult("getresult.php");
+</script>
 </body>
 </html>
