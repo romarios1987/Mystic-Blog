@@ -232,6 +232,7 @@ nav ul li.active{
 	overflow: hidden;
 	background-color: #000;
 	margin-bottom: 10px;
+    height: 150px;
 }
 .rel-post .title{
   color: rgba(255, 255, 255, 0.7);
@@ -360,7 +361,10 @@ nav ul li.active{
         font-size: 15px;
     }
 }
-
+.image-post img{
+    float: left;
+    margin-right: 15px;
+}
 
 
 

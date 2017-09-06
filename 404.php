@@ -1,6 +1,4 @@
-<?php
-include 'inc/header.php';
-?>
+<?php include 'inc/header.php'; ?>
     <div class="wrap-center-content">
         <div class="container">
             <div class="row">

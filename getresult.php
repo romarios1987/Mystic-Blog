@@ -38,7 +38,7 @@ foreach ($faq as $k => $v) {
     $output .= '<div class="card large hoverable">
                 <input type="hidden" id="rowcount" name="rowcount" value="' . $_GET["rowcount"] . '" >
                 <div class="date-acticle">
-                    <div class="chip"><i class="fa fa-calendar"></i>  <span>' . $faq[$k]["date"] . '</span></div>
+                    <div class="chip"><i class="fa fa-calendar"></i>  <span>' . $fm->formatDate($faq[$k]["date"]) . '</span></div>
                     <div class="chip"><i class="fa fa-user"></i>  <span>' . $faq[$k]["author"] . '</span></div>
                 </div>
             <div class="card-image">
@@ -49,7 +49,7 @@ foreach ($faq as $k => $v) {
               <p>' . $fm->textShorten($faq[$k]["body"]) . '</p>
            </div>
            <div class="card-action">
-                <a href="post.php" class="waves-effect waves-light btn red accent-4">Далее</a>
+                <a href="post.php?id=' . $faq[$k]["id"] . '" class="waves-effect waves-light btn red accent-4">Далее</a>
            </div>
            </div><!-- /.card -->';
 

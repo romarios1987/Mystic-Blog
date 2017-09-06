@@ -1,74 +1,79 @@
 <?php include 'inc/header.php'; ?>
+
+<?php
+if (!isset($_GET['id']) || $_GET['id'] == null) {
+    echo "<script>window.location = '404.php';</script>";
+} else {
+    $id_post = $_GET['id'];
+}
+?>
+
 <div class="wrap-center-content">
     <div class="container">
         <div class="row">
             <div class="col s12 m7 l8">
                 <main>
+
                     <div class="full-article">
+                        <?php
+                        $query = "SELECT * FROM posts WHERE id = $id_post";
+                        $post = $db->runQuery($query);
+                        if ($post){
+                        foreach ($post as $k => $v){
+                        ?>
                         <div class="date-acticle-page">
-                            <div class="chip"><i class="fa fa-calendar"></i> <span>Дата</span></div>
-                            <div class="chip"><i class="fa fa-user"></i> <span>Автор</span></div>
+                            <div class="chip"><i class="fa fa-calendar"></i> <span><?= $fm->formatDate($post[$k]["date"]); ?></span>
+                            </div>
+                            <div class="chip"><i class="fa fa-user"></i> <span><?= $post[$k]["author"]; ?></span></div>
                         </div>
                         <hr>
                         <div class="article-content">
-                            <h4>Места планеты</h4>
+                            <h4><?= $post[$k]["title"]; ?></h4>
                             <div class="text">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum nam illum ipsum
-                                    corporis voluptatibus, perspiciatis possimus vitae consequuntur. Voluptate quisquam
-                                    reprehenderit sapiente cupiditate, esse consequuntur vel dicta, culpa, dolorem rerum
-                                    accusamus, reiciendis delectus laborum deleniti vitae dolore non voluptatibus
-                                    facilis.</p>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas sint ullam, nemo
-                                    consequatur hic non facere facilis commodi velit, reprehenderit, doloribus quam
-                                    nihil!</p>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque, aliquid.</p>
-                                <img src="images/image_1.jpg" class="responsive-img materialboxed" width="450"
-                                     alt="alt">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae, quos rem! Harum ex,
-                                    praesentium dolore molestias, dolores laborum repudiandae qui deserunt maiores
-                                    distinctio nihil eveniet quo esse excepturi itaque nulla, accusamus ad laudantium
-                                    voluptatibus vel quidem iste asperiores! Sequi tempore nemo quo excepturi
-                                    reprehenderit unde illum esse voluptas nam deleniti nihil dignissimos, dolores,
-                                    soluta porro molestiae doloribus corrupti dolor pariatur?</p>
-                            </div>
+                                <div class="image-post"><img class="responsive-img materialboxed" width="450"
+                                                             src="images/<?= $post[$k]["image"]; ?>"
+                                                             alt="<?= $post[$k]["title"]; ?>"></div>
+                                <p><?= $post[$k]["body"]; ?></p>
+                            </div><!--/.text-->
                         </div><!-- article-content -->
+
                     </div><!-- /.full-article -->
-                    <h6>Блок Комментарии(0)</h6>
+
                     <div class="relatedpost center-align">
                         <h5>Похожие статьи</h5>
                         <div class="row">
-                            <div class="col s6 m6 l4">
-                                <div class="rel-post"><a href="#"><img src="images/image_1.jpg" class="responsive-img"
-                                                                       alt="alt"><span
-                                                class="title">Destruction Expert</span></a></div>
-                            </div>
-                            <div class="col s6 m6 l4">
-                                <div class="rel-post"><a href="#"><img src="images/image_1.jpg" class="responsive-img"
-                                                                       alt="alt"><span
-                                                class="title">Destruction Expert</span></a></div>
-                            </div>
-                            <div class="col s6 m6 l4">
-                                <div class="rel-post"><a href="#"><img src="images/image_1.jpg" class="responsive-img"
-                                                                       alt="alt"><span
-                                                class="title">Destruction Expert</span></a></div>
-                            </div>
-                            <div class="col s6 m6 l4">
-                                <div class="rel-post"><a href="#"><img src="images/image_1.jpg" class="responsive-img"
-                                                                       alt="alt"><span
-                                                class="title">Destruction Expert</span></a></div>
-                            </div>
-                            <div class="col s6 m6 l4">
-                                <div class="rel-post"><a href="#"><img src="images/image_1.jpg" class="responsive-img"
-                                                                       alt="alt"><span
-                                                class="title">Destruction Expert</span></a></div>
-                            </div>
-                            <div class="col s6 m6 l4">
-                                <div class="rel-post"><a href="#"><img src="images/image_1.jpg" class="responsive-img"
-                                                                       alt="alt"><span
-                                                class="title">Destruction Expert</span></a></div>
-                            </div>
+                            <?php
+                            $cat_id = $post[$k]["category"];
+                            $query_related = "SELECT * FROM posts WHERE category = '$cat_id' ORDER BY rand() LIMIT 6";
+                            $related_post = $db->runQuery($query_related);
+                            if ($related_post) {
+                                foreach ($related_post as $key => $value) {
+                                    ?>
+                                    <div class="col s6 m6 l4">
+
+                                        <div class="rel-post">
+                                            <a href="post.php?id=<?= $related_post[$key]["id"]; ?>"><img
+                                                        src="images/<?= $related_post[$key]["image"]; ?>"
+                                                        class="responsive-img"
+                                                        alt="<?= $related_post[$key]["title"]; ?>"><span
+                                                        class="title"><?= $related_post[$key]["title"]; ?></span></a>
+                                        </div><!--/.rel-post-->
+
+                                    </div>
+                                <?php }
+                            } else {
+                                echo "Нету пока похожих статей";
+                            }
+                            ?>
+
                         </div>
                     </div><!-- /.relatedpost -->
+
+                    <?php }
+                    } else {
+                        echo "<script>window.location = '404.php';</script>";
+                    } ?>
+                    <h6>Блок Комментарии(0)</h6>
                 </main>
             </div>
             <div class="col s12 m5 l4">
