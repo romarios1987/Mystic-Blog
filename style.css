@@ -25,6 +25,10 @@ h1, h2, h3, h4, h5, h6{
   font-family: OpenSansSemiBold, sans-serif;
 }
 
+i.fa-bars{
+    font-size: 28px;
+}
+
 .wrap-center-content{
     margin-top: 35px;
 }
@@ -177,7 +181,11 @@ aside .side-nav{
 	font-size: 20px;
 	color: rgba(0, 0, 0, 0.87);
 	margin-bottom: 13px;
+     line-height: 23px;
  }
+.latest-article h6 {
+    margin-bottom: 15px;
+}
  .latest-article{
  	overflow: hidden;
  	margin-bottom: 25px;
@@ -187,7 +195,8 @@ aside .side-nav{
  .latest-article img{
  	width: 50%;
  	float: left;
- 	margin-right: 10px;
+ 	margin-right: 15px;
+     height: 110px;
  }
 .latest-article p{
 	display: inline;

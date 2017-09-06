@@ -13,9 +13,8 @@ $fm = new Format();
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Mystic Blog</title>
     <link rel="shortcut icon" type='image/x-icon' href="images/favicon/tomcat.ico">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="libs/materialize/css/materialize.css">
+    <link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="libs/materialize/css/materialize.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -27,7 +26,7 @@ $fm = new Format();
         <div class="container">
             <div class="nav-wrapper">
                 <a href="index.php" class="brand-logo"><img src="images/logo_white.svg" class="" alt="alt"><span>MysticBlog</span></a>
-                <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+                <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="fa fa-bars"></i></a>
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
                     <li><a href="index.php">Главная</a></li>
                     <li class="active"><a href="about.php">О сайте</a></li>
