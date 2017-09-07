@@ -24,7 +24,7 @@
 										<label for='email'>Введите ваш email</label>
 									</div>
 									<label style='float: right;'>
-									<a class='red-text accent-4 fogot-link' href='login.html'><b>Войти</b></a>
+									<a class='red-text accent-4 fogot-link' href='login.php'><b>Войти</b></a>
 									</label>
 								</div>
 								<div class='row'>

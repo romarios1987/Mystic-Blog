@@ -28,7 +28,7 @@
 						</ul>
 					</div><!-- /.wrap-dropdown-head -->
 					<ul class="right hide-on-med-and-down">
-						<li class="active"><a href="index.html">Dashbord</a></li>
+						<li class="active"><a href="index.php">Dashbord</a></li>
 						<li><a href="badges.html">Входящие(3)</a></li>
 						<li><a href="profile.php">Профиль пользователя</a></li>
 						<li><a href="http://blog-mystic.loc/" target="_blank">Перейти на сайт</a></li>
@@ -99,25 +99,13 @@
 			<div class="col s12 m8 l9">
 				<main>
 					<div class="admin-dashboard">
-						<div class="header-dash"><h5>Обновление социальных сетей</h5></div>
+						<div class="header-dash"><h5>Обновить текст об авторских правах</h5></div>
 						<div class="divider"></div>
 						<div class="admin-content">
 							<form action="#">
 								<div class="row">
 									<div class="col m12 s12">
-										<h6><b>Facebook</b></h6>
-										<div class="input-field">
-											<input id="last_name" type="text">
-										</div>
-										<h6><b>Twitter</b></h6>
-										<div class="input-field">
-											<input id="last_name" type="text">
-										</div>
-										<h6><b>LinkedIn</b></h6>
-										<div class="input-field">
-											<input id="last_name" type="text">
-										</div>
-										<h6><b>Google Plus</b></h6>
+										<h6><b>Copyright</b></h6>
 										<div class="input-field">
 											<input id="last_name" type="text">
 										</div>

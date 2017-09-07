@@ -30,7 +30,7 @@
 										<label for='password'>Введите пароль</label>
 									</div>
 									<label style='float: right;'>
-									<a class='red-text accent-4 fogot-link' href='forgot_pass.html'><b>Забыли пароль?</b></a>
+									<a class='red-text accent-4 fogot-link' href='forgot_pass.php'><b>Забыли пароль?</b></a>
 									</label>
 								</div>
 								<div class='row'>

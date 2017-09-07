@@ -28,7 +28,7 @@
 						</ul>
 					</div><!-- /.wrap-dropdown-head -->
 					<ul class="right hide-on-med-and-down">
-						<li class="active"><a href="index.html">Dashbord</a></li>
+						<li class="active"><a href="index.php">Dashbord</a></li>
 						<li><a href="badges.html">Входящие(3)</a></li>
 						<li><a href="profile.php">Профиль пользователя</a></li>
 						<li><a href="http://blog-mystic.loc/" target="_blank">Перейти на сайт</a></li>
@@ -99,33 +99,34 @@
 			<div class="col s12 m8 l9">
 				<main>
 					<div class="admin-dashboard">
-						<div class="header-dash"><h5>Добавить новый слайд</h5></div>
+						<div class="header-dash"><h5>Обновление социальных сетей</h5></div>
 						<div class="divider"></div>
 						<div class="admin-content">
-
-							<form action="#" class="col s8">
+							<form action="#">
 								<div class="row">
-								<h6><b>Заголовок</b></h6>
-									<div class="input-field">
-										<input id="last_name" type="text">
-										<label for="last_name">Введите заголовок слайда</label>
-									</div>
-									<h6><b>Загрузить картинку</b></h6>
-									<div class="file-field input-field">
-										<div class="btn grey darken-4">
-											<span>Выберите файл</span>
-											<input type="file">
+									<div class="col m12 s12">
+										<h6><b>Facebook</b></h6>
+										<div class="input-field">
+											<input id="last_name" type="text">
 										</div>
-										<div class="file-path-wrapper">
-											<input class="file-path validate" type="text">
+										<h6><b>Twitter</b></h6>
+										<div class="input-field">
+											<input id="last_name" type="text">
 										</div>
+										<h6><b>LinkedIn</b></h6>
+										<div class="input-field">
+											<input id="last_name" type="text">
+										</div>
+										<h6><b>Google Plus</b></h6>
+										<div class="input-field">
+											<input id="last_name" type="text">
+										</div>
+										<input type="submit" class="waves-effect waves-light btn pulse red accent-4" value="Обновить">
 									</div>
-									<input type="submit" class="waves-effect waves-light btn pulse red accent-4" value="Сохранить">
 								</div>
 							</form>
-
-						</div>
-					</div>
+						</div><!-- /.admin-content -->
+					</div><!-- /.admin-dashboard -->
 				</main>
 			</div>
 		</div>
@@ -141,6 +142,5 @@
 	<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 	<script src="../libs/materialize/js/materialize.min.js"></script>
 	<script src="script.js"></script>
-
 </body>
 </html>

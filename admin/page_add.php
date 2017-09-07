@@ -28,7 +28,7 @@
 						</ul>
 					</div><!-- /.wrap-dropdown-head -->
 					<ul class="right hide-on-med-and-down">
-						<li class="active"><a href="index.html">Dashbord</a></li>
+						<li class="active"><a href="index.php">Dashbord</a></li>
 						<li><a href="badges.html">Входящие(3)</a></li>
 						<li><a href="profile.php">Профиль пользователя</a></li>
 						<li><a href="http://blog-mystic.loc/" target="_blank">Перейти на сайт</a></li>
@@ -99,45 +99,26 @@
 			<div class="col s12 m8 l9">
 				<main>
 					<div class="admin-dashboard">
-						<div class="header-dash"><h5>Список категорий</h5></div>
+						<div class="header-dash"><h5>Добавить новую страницу</h5></div>
 						<div class="divider"></div>
 						<div class="admin-content">
-							<table class="highlight responsive-table  grey lighten-3 bordered">
-								<thead>
-									<tr>
-										<th>Номер</th>
-										<th>Название категории</th>
-										<th>Действие</th>
-									</tr>
-								</thead>
 
-								<tbody>
-									<tr>
-										<td>1</td>
-										<td>Eclair</td>
-										<td>
-											<a href="#" class="black-text"><i class="fa fa-pencil"></i></a> || 
-											<a href="#" class="red-text accent-4"><i class="fa fa-trash-o"></i></a>
-										</td>
-									</tr>
-									<tr>
-										<td>2</td>
-										<td>Jellybean</td>
-										<td>
-											<a href="#" class="black-text"><i class="fa fa-pencil"></i></a> || 
-											<a href="#" class="red-text accent-4"><i class="fa fa-trash-o"></i></a>
-										</td>
-									</tr>
-									<tr>
-										<td>3</td>
-										<td>Lollipop</td>
-										<td>
-											<a href="#" class="black-text"><i class="fa fa-pencil"></i></a> || 
-											<a href="#" class="red-text accent-4"><i class="fa fa-trash-o"></i></a>
-										</td>
-									</tr>
-								</tbody>
-							</table>
+							<form action="#">
+								<div class="row">
+									<div class="col m12 s12">
+										<h6><b>Название</b></h6>
+										<div class="input-field">
+											<input id="last_name" type="text">
+											<label for="last_name">Введите название страницы</label>
+										</div>
+										<h6><b>Описание</b></h6>
+										<div class="input-field">
+											<textarea id="textarea1" name="ck_editor" class="materialize-textarea"></textarea>
+										</div>
+										<input type="submit" class="waves-effect waves-light btn pulse red accent-4" value="Сохранить">
+									</div>
+								</div>
+							</form>
 						</div>
 					</div>
 				</main>
@@ -154,7 +135,11 @@
 	</footer>
 	<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 	<script src="../libs/materialize/js/materialize.min.js"></script>
+	<script type="text/javascript" src="../libs/ckeditor/ckeditor.js"></script>
 	<script src="script.js"></script>
 
+	<script>
+		CKEDITOR.replace( 'ck_editor');
+	</script>
 </body>
 </html>

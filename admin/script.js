@@ -4,5 +4,13 @@ $(document).ready(function(){
 $('select').material_select();
 
 });
+var ck = document.getElementById('textarea1');
+if(ck){
+    CKEDITOR.replace( 'ck_editor');
+}
+
+
+
+
 
 

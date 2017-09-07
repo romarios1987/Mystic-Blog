@@ -28,7 +28,7 @@
 						</ul>
 					</div><!-- /.wrap-dropdown-head -->
 					<ul class="right hide-on-med-and-down">
-						<li class="active"><a href="index.html">Dashbord</a></li>
+						<li class="active"><a href="index.php">Dashbord</a></li>
 						<li><a href="badges.html">Входящие(3)</a></li>
 						<li><a href="profile.php">Профиль пользователя</a></li>
 						<li><a href="http://blog-mystic.loc/" target="_blank">Перейти на сайт</a></li>
@@ -99,67 +99,31 @@
 			<div class="col s12 m8 l9">
 				<main>
 					<div class="admin-dashboard">
-						<div class="header-dash"><h5>Входящие</h5></div>
+						<div class="header-dash"><h5>Добавить новый слайд</h5></div>
 						<div class="divider"></div>
 						<div class="admin-content">
-							<table class="highlight responsive-table  grey lighten-3 bordered">
-								<thead>
-									<tr>
-										<th>Номер</th>
-										<th>Имя отправителя</th>
-										<th>Email отправителя</th>
-										<th>Сообщение</th>
-										<th>Дата</th>
-										<th>Действие</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>1</td>
-										<td>Roman Batiuk</td>
-										<td>remi9988@mail.ru</td>
-										<td>Сообщение Сообщение</td>
-										<td>21.23.1099</td>
-										<td>
-											<a href="#" class="black-text" title="Просмотреть"><i class="fa fa-eye"></i></a> ||
-											<a href="#" class="black-text" title="Ответить"><i class="fa fa-reply"></i></a> || 
-											<a href="#" class="black-text" title="Переместить"><i class="fa fa-arrows"></i></a>
-										</td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-					</div>
-				<br>
-					<div class="admin-dashboard">
-						<div class="header-dash"><h5>Просмотренные сообщения</h5></div>
-						<div class="divider"></div>
-						<div class="admin-content">
-							<table class="highlight responsive-table  grey lighten-3 bordered">
-								<thead>
-									<tr>
-										<th>Номер</th>
-										<th>Имя отправителя</th>
-										<th>Email отправителя</th>
-										<th>Сообщение</th>
-										<th>Дата</th>
-										<th>Действие</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>1</td>
-										<td>Roman Batiuk</td>
-										<td>remi9988@mail.ru</td>
-										<td>Сообщение Сообщение</td>
-										<td>21.23.1099</td>
-										<td>
-											<a href="#" class="black-text" title="Просмотреть"><i class="fa fa-eye"></i></a> ||
-											<a href="#" class="red-text accent-4" title="Удалить"><i class="fa fa-trash-o"></i></a>
-										</td>
-									</tr>
-								</tbody>
-							</table>
+
+							<form action="#" class="col s8">
+								<div class="row">
+								<h6><b>Заголовок</b></h6>
+									<div class="input-field">
+										<input id="last_name" type="text">
+										<label for="last_name">Введите заголовок слайда</label>
+									</div>
+									<h6><b>Загрузить картинку</b></h6>
+									<div class="file-field input-field">
+										<div class="btn grey darken-4">
+											<span>Выберите файл</span>
+											<input type="file">
+										</div>
+										<div class="file-path-wrapper">
+											<input class="file-path validate" type="text">
+										</div>
+									</div>
+									<input type="submit" class="waves-effect waves-light btn pulse red accent-4" value="Сохранить">
+								</div>
+							</form>
+
 						</div>
 					</div>
 				</main>
@@ -176,6 +140,7 @@
 	</footer>
 	<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 	<script src="../libs/materialize/js/materialize.min.js"></script>
-	<!-- <script src="script.js"></script> -->
+	<script src="script.js"></script>
+
 </body>
 </html>
