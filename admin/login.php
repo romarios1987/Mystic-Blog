@@ -1,15 +1,13 @@
 <?php
 require_once '../classes/Session.php';
-Session::init();
+Session::checkLogin();
 require_once '../config/config.php';
 require_once '../classes/Database.php';
 require_once '../classes/Format.php';
-
 $db = new Database();
 $fm = new Format();
-
+ob_start();
 ?>
-
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -41,6 +39,7 @@ $fm = new Format();
                             Session::set("username", $result['username']);
                             Session::set("userId", $result['id']);
                             echo "<script>window.location = 'index.php';</script>";
+                           //header("Location: index.php");
                         } else {
                             echo "<span class='red-text accent-4'>Неверно введен логин или пароль !</span>";
                         }
@@ -77,7 +76,7 @@ $fm = new Format();
         </div>
     </div><!-- /.login-panel -->
 </main><!-- /.wrap-login-panel -->
-<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="../libs/jquery-3.2.1.min.js"></script>
 <script src="../libs/materialize/js/materialize.min.js"></script>
 <script type="text/javascript">
     var options = [
