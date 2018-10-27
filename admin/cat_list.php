@@ -18,30 +18,30 @@
                             </tr>
                             </thead>
                             <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td>Eclair</td>
-                                <td>
-                                    <a href="#" class="black-text"><i class="fa fa-pencil"></i></a> ||
-                                    <a href="#" class="red-text accent-4"><i class="fa fa-trash-o"></i></a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>2</td>
-                                <td>Jellybean</td>
-                                <td>
-                                    <a href="#" class="black-text"><i class="fa fa-pencil"></i></a> ||
-                                    <a href="#" class="red-text accent-4"><i class="fa fa-trash-o"></i></a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>3</td>
-                                <td>Lollipop</td>
-                                <td>
-                                    <a href="#" class="black-text"><i class="fa fa-pencil"></i></a> ||
-                                    <a href="#" class="red-text accent-4"><i class="fa fa-trash-o"></i></a>
-                                </td>
-                            </tr>
+
+                            <?php
+                            $query = "SELECT * FROM category ORDER BY id DESC";
+                            $category = $db->select($query);
+                            if ($category) {
+                                $i = 0;
+                                while ($result = $category->fetch_assoc()) {
+                                    $i++;
+                                    ?>
+                                    <tr>
+                                        <td><?= $i; ?></td>
+                                        <td><?= $result['name']; ?></td>
+                                        <td>
+                                            <a href="cat_edit.php?id_cat=<?= $result['id']; ?>" class="black-text"><i
+                                                        class="fa fa-pencil"></i></a> ||
+                                            <a onclick="return confirm('Вы уверены что хотите удалить?');"
+                                               href="cat_detele.php?id_cat=<?= $result['id']; ?>"
+                                               class="red-text accent-4"><i class="fa fa-trash-o"></i></a>
+                                        </td>
+                                    </tr>
+                                    <?php
+                                }
+                            }
+                            ?>
                             </tbody>
                         </table>
                     </div>

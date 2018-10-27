@@ -11,7 +11,6 @@
                     <div class="admin-content">
 
                         <?php
-
                         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
                             $category_name = $_POST['category_name'];
@@ -26,11 +25,8 @@
                                 } else {
                                     echo "<span class='red-text accent-4'>Категория успешно НЕ добавлена!!!</span>";
                                 }
-
                             }
-
                         }
-
                         ?>
 
 
